@@ -30,16 +30,20 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {  // Modifierがない  [rule:https://slackhq.github.io/compose-lints/rules/#when-should-i-expose-modifier-parameters]
+fun Greeting(
+    name: String,
+    modifier: Modifier=Modifier,
+) {
     Text(
         text = "Hello $name!",
+        modifier = modifier,
         fontSize = 32.sp  // 引数最後のカンマがない [rule:https://pinterest.github.io/ktlint/latest/rules/standard/#trailing-comma-on-call-site]
     )
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+private fun GreetingPreview() {
     LintpracticeTheme {
         Greeting("Android")
     }
