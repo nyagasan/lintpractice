@@ -37,7 +37,7 @@ fun Greeting(
     Text(
         text = "Hello $name!",
         modifier = modifier,
-        fontSize = 32.sp, // 引数最後のカンマがない [rule:https://pinterest.github.io/ktlint/latest/rules/standard/#trailing-comma-on-call-site]
+        fontSize = 32.sp,
     )
 }
 
