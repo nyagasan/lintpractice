@@ -59,19 +59,6 @@ android {
     }
 }
 
-ktlint {
-    android = true
-    outputToConsole = true
-    verbose = true
-    debug = true
-    ignoreFailures = true
-    reporters {
-        reporter(ReporterType.HTML)
-        reporter(ReporterType.CHECKSTYLE)
-    }
-    ignoreFailures = false
-}
-
 dependencies {
 
     implementation(libs.androidx.core.ktx)
