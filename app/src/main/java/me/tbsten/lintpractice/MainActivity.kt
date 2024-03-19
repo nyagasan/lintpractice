@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
             LintpracticeTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.background,
                 ) {
                     Greeting("Android")
                 }
@@ -30,10 +30,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {  // Modifierがない  [rule:https://slackhq.github.io/compose-lints/rules/#when-should-i-expose-modifier-parameters]
+fun Greeting(name: String) { // Modifierがない  [rule:https://slackhq.github.io/compose-lints/rules/#when-should-i-expose-modifier-parameters]
     Text(
         text = "Hello $name!",
-        fontSize = 32.sp  // 引数最後のカンマがない [rule:https://pinterest.github.io/ktlint/latest/rules/standard/#trailing-comma-on-call-site]
+        fontSize = 32.sp, // 引数最後のカンマがない [rule:https://pinterest.github.io/ktlint/latest/rules/standard/#trailing-comma-on-call-site]
     )
 }
 
